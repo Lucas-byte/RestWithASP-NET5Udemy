@@ -1,6 +1,6 @@
 ﻿using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Model.Context;
-using RestWithASPNETUdemy.Repository;
+using RestWithASPNETUdemy.Repository.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +10,8 @@ namespace RestWithASPNETUdemy.Business.Implemetations
 {
     public class PersonBusinessImplemetation : IPersonBusiness
     {
-        private readonly IPersonRepository _repository;
-        public PersonBusinessImplemetation(IPersonRepository repository)
+        private readonly IRepository<Person> _repository;
+        public PersonBusinessImplemetation(IRepository<Person> repository)
         {
             _repository = repository;
         }

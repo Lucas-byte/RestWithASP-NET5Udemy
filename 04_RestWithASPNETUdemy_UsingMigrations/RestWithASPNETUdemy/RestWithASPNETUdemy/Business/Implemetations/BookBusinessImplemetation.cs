@@ -1,18 +1,14 @@
 ﻿using RestWithASPNETUdemy.Model;
-using RestWithASPNETUdemy.Model.Context;
-using RestWithASPNETUdemy.Repository;
-using System;
+using RestWithASPNETUdemy.Repository.Generic;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RestWithASPNETUdemy.Business.Implemetations
 {
     public class BookBusinessImplemetation : IBookBusiness
     {
-        private readonly IBookRepository _repository;
+        private readonly IRepository<Book> _repository;
 
-        public BookBusinessImplemetation(IBookRepository repository)
+        public BookBusinessImplemetation(IRepository<Book> repository)
         {
             _repository = repository;
         }
